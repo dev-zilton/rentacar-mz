@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useLanguage } from '@/contexts/LanguageContext'
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Pricing Section - Transparent pricing information
@@ -12,47 +12,54 @@ import { useLanguage } from '@/contexts/LanguageContext'
  */
 
 interface PricingTier {
-  nameKey: string
-  descKey: string
-  priceKey: string
-  featureKeys: string[]
-  highlighted?: boolean
+  nameKey: string;
+  descKey: string;
+  priceKey: string;
+  featureKeys: string[];
+  highlighted?: boolean;
 }
 
 const pricingTiers: PricingTier[] = [
   {
-    nameKey: 'pricing.daily',
-    descKey: 'pricing.dailyDesc',
-    priceKey: 'pricing.seeRates',
-    featureKeys: ['km', 'insurance', 'cancellation', 'roadside'],
+    nameKey: "pricing.daily",
+    descKey: "pricing.dailyDesc",
+    priceKey: "pricing.seeRates",
+    featureKeys: ["km", "insurance", "cancellation", "roadside"],
   },
   {
-    nameKey: 'pricing.weekly',
-    descKey: 'pricing.weeklyDesc',
-    priceKey: 'pricing.weeklyDiscount',
-    featureKeys: ['km', 'insurance', 'cancellation', 'roadside', 'gps'],
+    nameKey: "pricing.weekly",
+    descKey: "pricing.weeklyDesc",
+    priceKey: "pricing.weeklyDiscount",
+    featureKeys: ["km", "insurance", "cancellation", "roadside", "gps"],
     highlighted: true,
   },
   {
-    nameKey: 'pricing.monthly',
-    descKey: 'pricing.monthlyDesc',
-    priceKey: 'pricing.monthlyDiscount',
-    featureKeys: ['km', 'insurance', 'cancellation', 'roadside', 'gps', 'maintenance'],
+    nameKey: "pricing.monthly",
+    descKey: "pricing.monthlyDesc",
+    priceKey: "pricing.monthlyDiscount",
+    featureKeys: [
+      "km",
+      "insurance",
+      "cancellation",
+      "roadside",
+      "gps",
+      "maintenance",
+    ],
   },
-]
+];
 
 export function Pricing() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section id="pricing" className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('pricing.title')}
+            {t("pricing.title")}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('pricing.subtitle')}
+            {t("pricing.subtitle")}
           </p>
         </div>
 
@@ -62,12 +69,18 @@ export function Pricing() {
               key={idx}
               className={`rounded-xl p-8 transition-transform duration-300 ${
                 tier.highlighted
-                  ? 'bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-2xl scale-105'
-                  : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700'
+                  ? "bg-linear-to-br from-blue-600 to-blue-700 text-white shadow-2xl scale-105"
+                  : "bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700"
               }`}
             >
               <h3 className="text-2xl font-bold mb-2">{t(tier.nameKey)}</h3>
-              <p className={`text-sm mb-4 ${tier.highlighted ? 'text-blue-100' : 'text-gray-600 dark:text-gray-400'}`}>
+              <p
+                className={`text-sm mb-4 ${
+                  tier.highlighted
+                    ? "text-blue-100"
+                    : "text-gray-600 dark:text-gray-400"
+                }`}
+              >
                 {t(tier.descKey)}
               </p>
 
@@ -79,7 +92,7 @@ export function Pricing() {
                 {tier.featureKeys.map((featureKey) => (
                   <li key={featureKey} className="flex items-start gap-3">
                     <svg
-                      className="w-5 h-5 flex-shrink-0 mt-0.5"
+                      className="w-5 h-5 shrink-0 mt-0.5"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -98,20 +111,20 @@ export function Pricing() {
                 href="#contact"
                 className={`block text-center w-full py-3 rounded-lg font-semibold transition-colors duration-200 ${
                   tier.highlighted
-                    ? 'bg-white text-blue-600 hover:bg-gray-100'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? "bg-white text-blue-600 hover:bg-gray-100"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
                 }`}
               >
-                {t('pricing.cta')}
+                {t("pricing.cta")}
               </a>
             </div>
           ))}
         </div>
 
         <p className="text-center text-sm text-gray-500 dark:text-gray-500 mt-8">
-          {t('pricing.note')}
+          {t("pricing.note")}
         </p>
       </div>
     </section>
-  )
+  );
 }
