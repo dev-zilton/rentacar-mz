@@ -1,3 +1,19 @@
+/**
+ * Next.js configuration
+ * - Set Turbopack root to workspace root so next can resolve packages correctly
+ * - Add image quality options used in the project
+ */
+const config = {
+  turbopack: {
+    root: '.',
+  },
+  images: {
+    // include the quality values referenced by the project
+    qualities: [70, 70, 70, 70, 75, 80],
+  },
+}
+
+export default config
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
