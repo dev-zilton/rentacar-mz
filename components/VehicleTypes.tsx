@@ -95,7 +95,7 @@ function PassengersIcon() {
   )
 }
 
-const iconMap: Record<string, () => JSX.Element> = {
+const iconMap: Record<string, () => React.JSX.Element> = {
   pickup: PickupIcon,
   suv: SuvIcon,
   minisuv: MiniSuvIcon,
