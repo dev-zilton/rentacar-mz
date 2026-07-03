@@ -12,9 +12,14 @@ import { LanguageToggle } from "./LanguageToggle";
  * - Throttled scroll listener (100ms)
  * - Minimal state updates
  * - No CSS-in-JS, only Tailwind classes
+ *
+ * Mobile menu:
+ * - Toggled via state, closes on link click or Escape key
+ * - aria-expanded / aria-controls / aria-label for accessibility
  */
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -35,6 +40,26 @@ export function Navigation() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const navLinks = [
+    { href: "#fleet", label: t("nav.fleet") },
+    { href: "#vehicle-types", label: t("nav.vehicleList") },
+    { href: "#pricing", label: t("nav.pricing") },
+    { href: "#faq", label: t("nav.faq") },
+  ];
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -49,24 +74,15 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:flex gap-8 items-center">
-          <a
-            href="#fleet"
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            {t("nav.fleet")}
-          </a>
-          <a
-            href="#pricing"
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            {t("nav.pricing")}
-          </a>
-          <a
-            href="#faq"
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            {t("nav.faq")}
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             href="#contact"
             className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors"
@@ -80,22 +96,65 @@ export function Navigation() {
           <ThemeToggle />
         </div>
 
-        <button className="md:hidden text-gray-900 dark:text-gray-100">
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+          className="md:hidden text-gray-900 dark:text-gray-100"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            {isMobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
           </svg>
         </button>
       </div>
+
+      {isMobileMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-4 sm:px-6 py-4"
+        >
+          <div className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={closeMobileMenu}
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={closeMobileMenu}
+              className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-lg text-center hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors"
+            >
+              {t("nav.contact")}
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

@@ -1,6 +1,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Hero } from '@/components/Hero'
 import { Fleet } from '@/components/Fleet'
+import { VehicleTypes } from '@/components/VehicleTypes'
 import { Pricing } from '@/components/Pricing'
 import { ContactForm } from '@/components/ContactForm'
 import { FAQ } from '@/components/FAQ'
@@ -29,6 +30,7 @@ export default function Page() {
       <Navigation />
       <Hero />
       <Fleet />
+      <VehicleTypes />
       <Pricing />
       <ContactForm />
       <FAQ />

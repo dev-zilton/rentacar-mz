@@ -14,6 +14,7 @@ export const translations = {
       pricing: "Preços",
       faq: "Perguntas",
       contact: "Contacto",
+      vehicleList: "Lista de Viaturas",
     },
     // Hero
     hero: {
@@ -57,6 +58,37 @@ export const translations = {
       premiumFeatures: ["5 Lugares", "Automático", "Interior em Pele"],
       perDay: "por dia",
       select: "Selecionar",
+    },
+    // Vehicle Types
+    vehicleTypes: {
+      title: "Tipos de Viaturas",
+      subtitle:
+        "Explore as categorias disponiveis e escolha a viatura ideal para a sua viagem",
+      pickup: {
+        name: "Pick-up",
+        description:
+          "Robustez e capacidade de carga para trabalho pesado ou aventuras fora da estrada, com boa traccao para os terrenos mais exigentes.",
+      },
+      suv: {
+        name: "SUV",
+        description:
+          "Espaco, potencia e conforto elevado para longas viagens em familia ou deslocacoes a zonas rurais.",
+      },
+      minisuv: {
+        name: "Mini SUV",
+        description:
+          "Formato compacto sem abrir mao do conforto, ideal para o dia a dia na cidade com boa economia de combustivel.",
+      },
+      sedan: {
+        name: "Sedan",
+        description:
+          "Elegancia e suavidade de conducao para viagens de negocios ou deslocacoes urbanas com maximo conforto.",
+      },
+      passengers: {
+        name: "Passageiros",
+        description:
+          "Viaturas de maior capacidade para grupos e familias numerosas, garantindo espaco e comodidade para todos.",
+      },
     },
     // Pricing
     pricing: {
@@ -167,6 +199,7 @@ export const translations = {
       pricing: "Pricing",
       faq: "FAQ",
       contact: "Contact",
+      vehicleList: "Vehicle List",
     },
     // Hero
     hero: {
@@ -205,6 +238,37 @@ export const translations = {
       premiumFeatures: ["5 Seats", "Automatic", "Leather Interior"],
       perDay: "per day",
       select: "Select",
+    },
+    // Vehicle Types
+    vehicleTypes: {
+      title: "Vehicle Types",
+      subtitle:
+        "Browse our vehicle categories and choose the right one for your trip",
+      pickup: {
+        name: "Pick-up",
+        description:
+          "Rugged build and generous cargo capacity for heavy-duty work or off-road adventures, with reliable traction for demanding terrain.",
+      },
+      suv: {
+        name: "SUV",
+        description:
+          "Extra space, power and comfort for long family trips or travel to rural areas.",
+      },
+      minisuv: {
+        name: "Mini SUV",
+        description:
+          "A compact shape without sacrificing comfort, ideal for everyday city driving with good fuel economy.",
+      },
+      sedan: {
+        name: "Sedan",
+        description:
+          "Smooth, elegant driving for business trips or city travel with maximum comfort.",
+      },
+      passengers: {
+        name: "Passenger Van",
+        description:
+          "Higher-capacity vehicles for larger groups and families, with plenty of room and comfort for everyone.",
+      },
     },
     // Pricing
     pricing: {
