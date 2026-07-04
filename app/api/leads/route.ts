@@ -16,10 +16,10 @@ function getSupabaseClient() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { email, phone, pickupDate, pickupLocation, returnLocation, carType, name } = body
+    const { email, phone, pickupDate, returnDate, pickupLocation, returnLocation, carType, name } = body
 
     // Validate input
-    if (!email || !phone || !name || !pickupLocation) {
+    if (!email || !phone || !name || !pickupLocation || !pickupDate || !returnDate) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -35,8 +35,44 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Get Supabase client
+    // Validate date range
+    if (returnDate <= pickupDate) {
+      return NextResponse.json(
+        { error: 'Return date must be after pickup date' },
+        { status: 400 }
+      )
+    }
+
     const supabase = getSupabaseClient()
+
+    // Check availability: any existing lead for the same car type whose
+    // [pickup_date, return_date) range overlaps the requested range,
+    // and that is not cancelled, blocks the new booking.
+    const carTypeToCheck = carType || 'standard'
+
+    const { data: overlapping, error: availabilityError } = await supabase
+      .from('leads')
+      .select('id')
+      .eq('car_type', carTypeToCheck)
+      .neq('status', 'cancelled')
+      .lt('pickup_date', returnDate)
+      .gt('return_date', pickupDate)
+      .limit(1)
+
+    if (availabilityError) {
+      console.error('Supabase availability check error:', availabilityError)
+      return NextResponse.json(
+        { error: 'Failed to check availability' },
+        { status: 500 }
+      )
+    }
+
+    if (overlapping && overlapping.length > 0) {
+      return NextResponse.json(
+        { error: 'unavailable' },
+        { status: 409 }
+      )
+    }
 
     // Insert lead into Supabase
     const { data, error } = await supabase
@@ -46,9 +82,10 @@ export async function POST(request: NextRequest) {
           email,
           phone,
           pickup_date: pickupDate,
+          return_date: returnDate,
           pickup_location: pickupLocation,
           return_location: returnLocation || pickupLocation,
-          car_type: carType || 'inquiry',
+          car_type: carTypeToCheck,
           name,
           created_at: new Date().toISOString(),
           source: 'landing_page',

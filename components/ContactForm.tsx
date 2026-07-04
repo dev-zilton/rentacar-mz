@@ -9,6 +9,7 @@ interface FormData {
   email: string
   phone: string
   pickupDate: string
+  returnDate: string
   pickupLocation: string
   returnLocation: string
   carType: string
@@ -22,6 +23,7 @@ const INITIAL_FORM_DATA: FormData = {
   email: '',
   phone: '',
   pickupDate: '',
+  returnDate: '',
   pickupLocation: '',
   returnLocation: '',
   carType: 'standard',
@@ -57,6 +59,10 @@ export function ContactForm() {
 
     if (!formData.pickupDate) newErrors.pickupDate = t('contact.validation.dateRequired')
     if (!formData.pickupLocation) newErrors.pickupLocation = t('contact.validation.pickupLocationRequired')
+
+    if (!formData.returnDate) newErrors.returnDate = t('contact.validation.returnDateRequired')
+    else if (formData.pickupDate && formData.returnDate <= formData.pickupDate)
+      newErrors.returnDate = t('contact.validation.returnDateInvalid')
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -97,6 +103,12 @@ export function ContactForm() {
       })
 
       if (!response.ok) {
+        const data = await response.json().catch(() => ({}))
+        if (response.status === 409 || data.error === 'unavailable') {
+          setStatus('error')
+          setMessage(t('contact.validation.unavailable'))
+          return
+        }
         throw new Error('Failed to submit form')
       }
 
@@ -209,6 +221,26 @@ export function ContactForm() {
             {errors.pickupDate && (
               <p className="text-red-600 text-sm mt-1">{errors.pickupDate}</p>
             )}
+
+          {/* Return Date */}
+          <div>
+            <label htmlFor="returnDate" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t('contact.returnDate')}
+            </label>
+            <input
+              type="date"
+              id="returnDate"
+              name="returnDate"
+              value={formData.returnDate}
+              onChange={handleChange}
+              className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
+                errors.returnDate ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+              } focus:outline-none focus:border-blue-500 transition-colors`}
+            />
+            {errors.returnDate && (
+              <p className="text-red-600 text-sm mt-1">{errors.returnDate}</p>
+            )}
+          </div>
           </div>
 
           {/* Pickup Location */}
