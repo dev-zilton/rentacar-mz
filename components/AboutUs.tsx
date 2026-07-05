@@ -1,15 +1,37 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { OptimizedImage } from './OptimizedImage'
 
 export function AboutUs() {
   const { t, tList } = useLanguage()
   const values = tList('about.valuesList')
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-950">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="text-center mb-16">
+    <section id="about" className="bg-gray-50 dark:bg-gray-950">
+      <div className="relative h-80 md:h-96 w-full overflow-hidden">
+        <OptimizedImage
+          src="/images/about/banner.jpg"
+          alt="Interior de viatura premium"
+          width={1600}
+          height={700}
+          lazy={true}
+          className="w-full h-full"
+        />
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+          <div className="text-center px-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {t('about.title')}
+            </h2>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+              {t('about.subtitle')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
+        <div className="hidden">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t('about.title')}
           </h2>
