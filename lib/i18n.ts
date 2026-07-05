@@ -8,8 +8,35 @@ export const translations = {
       description:
         "Aluguer de viaturas premium em Maputo e principais cidades de Moçambique, com suporte 24/7.",
     },
+    // Sobre Nos - CONTEUDO FICTICIO, substituir pelo texto real da empresa
+    about: {
+      title: "Sobre Nós",
+      subtitle: "Conheça a EliteRent Moçambique",
+      missionTitle: "Missão",
+      missionText:
+        "Facilitar a mobilidade em Moçambique, oferecendo veículos de qualidade e um serviço de aluguer simples, transparente e acessível para famílias, empresas e visitantes.",
+      visionTitle: "Visão",
+      visionText:
+        "Ser a marca de referência em aluguer de viaturas em Moçambique, reconhecida pela confiança, qualidade e cobertura nacional.",
+      valuesTitle: "Valores",
+      valuesList: [
+        "Profissionalismo",
+        "Transparência",
+        "Qualidade",
+        "Confiança",
+        "Compromisso com o cliente",
+      ],
+      statsTitle: "Porquê escolher-nos?",
+      statYearsValue: "5+",
+      statYearsLabel: "Anos de Experiência",
+      statClientsValue: "150+",
+      statClientsLabel: "Clientes Satisfeitos",
+      statCarsValue: "50+",
+      statCarsLabel: "Viaturas Alugadas",
+    },
     // Navigation
     nav: {
+      about: "Sobre Nós",
       fleet: "Frota",
       pricing: "Preços",
       faq: "Perguntas",
@@ -227,8 +254,35 @@ export const translations = {
       description:
         "Premium car rental in Maputo and Mozambique's main cities, with 24/7 support.",
     },
+    // About Us - PLACEHOLDER CONTENT, replace with real company text
+    about: {
+      title: "About Us",
+      subtitle: "Meet EliteRent Mozambique",
+      missionTitle: "Mission",
+      missionText:
+        "To make mobility easier across Mozambique by offering quality vehicles and a simple, transparent and affordable rental service for families, businesses and visitors.",
+      visionTitle: "Vision",
+      visionText:
+        "To be the leading car rental brand in Mozambique, recognised for trust, quality and nationwide coverage.",
+      valuesTitle: "Values",
+      valuesList: [
+        "Professionalism",
+        "Transparency",
+        "Quality",
+        "Trust",
+        "Customer commitment",
+      ],
+      statsTitle: "Why choose us?",
+      statYearsValue: "5+",
+      statYearsLabel: "Years of Experience",
+      statClientsValue: "150+",
+      statClientsLabel: "Happy Customers",
+      statCarsValue: "50+",
+      statCarsLabel: "Vehicles Rented",
+    },
     // Navigation
     nav: {
+      about: "About Us",
       fleet: "Fleet",
       pricing: "Pricing",
       faq: "FAQ",

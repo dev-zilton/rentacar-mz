@@ -52,6 +52,7 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
+    { href: "#about", label: t("nav.about") },
     { href: "#fleet", label: t("nav.fleet") },
     { href: "#vehicle-types", label: t("nav.vehicleList") },
     { href: "#pricing", label: t("nav.pricing") },
