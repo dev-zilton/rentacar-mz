@@ -14,6 +14,20 @@ function statusStyle(status: LeadStatus) {
   return STATUS_OPTIONS.find((s) => s.value === status)?.color || STATUS_OPTIONS[0].color
 }
 
+const CAR_TYPE_LABELS: Record<string, string> = {
+  economy: 'Económico',
+  standard: 'Standard',
+  suv: 'SUV de Luxo',
+  premium: 'Premium',
+  frigorifico: 'Camião Frigorífico',
+  carga: 'Camião de Carga',
+}
+
+function carTypeLabel(carType: string | null): string {
+  if (!carType) return '-'
+  return CAR_TYPE_LABELS[carType] || carType
+}
+
 export function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
   const [leads, setLeads] = useState(initialLeads)
   const [updatingId, setUpdatingId] = useState<number | null>(null)
@@ -59,7 +73,7 @@ export function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
               <th className="text-left px-4 py-3 font-medium">Data</th>
               <th className="text-left px-4 py-3 font-medium">Levantamento</th>
               <th className="text-left px-4 py-3 font-medium">Devolução</th>
-              <th className="text-left px-4 py-3 font-medium">Carro</th>
+              <th className="text-left px-4 py-3 font-medium">Categoria</th>
               <th className="text-left px-4 py-3 font-medium">Modelo</th>
               <th className="text-left px-4 py-3 font-medium">Estado</th>
             </tr>
@@ -75,7 +89,7 @@ export function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
                 <td className="px-4 py-3 whitespace-nowrap">{lead.pickup_date || '-'}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{lead.pickup_location || '-'}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{lead.return_location || '-'}</td>
-                <td className="px-4 py-3 whitespace-nowrap">{lead.car_type || '-'}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{carTypeLabel(lead.car_type)}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{lead.preferred_model || '-'}</td>
                 <td className="px-4 py-3">
                   <select
