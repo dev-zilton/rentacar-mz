@@ -19,6 +19,7 @@ interface CarTier {
   id: number
   nameKey: string
   descKey: string
+  modelsKey: string
   featuresKey: string
   pricePerDay: number
   image: string
@@ -29,6 +30,7 @@ const cars: CarTier[] = [
     id: 1,
     nameKey: 'fleet.economy',
     descKey: 'fleet.economyDesc',
+    modelsKey: 'fleet.economyModels',
     featuresKey: 'fleet.economyFeatures',
     pricePerDay: 3500,
     image: '/images/car-economy.png',
@@ -37,22 +39,50 @@ const cars: CarTier[] = [
     id: 2,
     nameKey: 'fleet.standard',
     descKey: 'fleet.standardDesc',
+    modelsKey: 'fleet.standardModels',
     featuresKey: 'fleet.standardFeatures',
     pricePerDay: 5500,
-    image: '/images/car-suv.png',
+    image: '/images/car-standard.png',
   },
   {
     id: 3,
+    nameKey: 'fleet.suv',
+    descKey: 'fleet.suvDesc',
+    modelsKey: 'fleet.suvModels',
+    featuresKey: 'fleet.suvFeatures',
+    pricePerDay: 6500,
+    image: '/images/car-suv.png',
+  },
+  {
+    id: 4,
     nameKey: 'fleet.premium',
     descKey: 'fleet.premiumDesc',
+    modelsKey: 'fleet.premiumModels',
     featuresKey: 'fleet.premiumFeatures',
     pricePerDay: 9000,
     image: '/images/car-premium.png',
   },
+  {
+    id: 5,
+    nameKey: 'fleet.frigorifico',
+    descKey: 'fleet.frigorificoDesc',
+    modelsKey: 'fleet.frigorificoModels',
+    featuresKey: 'fleet.frigorificoFeatures',
+    pricePerDay: 9500,
+    image: '/images/vehicle-types/frigorifico.png',
+  },
+  {
+    id: 6,
+    nameKey: 'fleet.carga',
+    descKey: 'fleet.cargaDesc',
+    modelsKey: 'fleet.cargaModels',
+    featuresKey: 'fleet.cargaFeatures',
+    pricePerDay: 8500,
+    image: '/images/vehicle-types/carga.jpg',
+  },
 ]
 
 function formatMT(value: number): string {
-  // Formato moçambicano: ponto como separador de milhares (ex.: 3.500 MT)
   return new Intl.NumberFormat('pt-MZ').format(value)
 }
 
@@ -71,7 +101,7 @@ export function Fleet() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {cars.map((car) => {
             const features = tList(car.featuresKey)
             const name = t(car.nameKey)
@@ -80,7 +110,6 @@ export function Fleet() {
                 key={car.id}
                 className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                {/* Car Image - Lazy loaded */}
                 <div className="relative h-64 w-full bg-gray-100 dark:bg-gray-700">
                   <OptimizedImage
                     src={car.image}
@@ -92,7 +121,6 @@ export function Fleet() {
                   />
                 </div>
 
-                {/* Car Details */}
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
@@ -105,7 +133,10 @@ export function Fleet() {
                     </div>
                   </div>
 
-                  {/* Features List */}
+                  <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                    {t('fleet.modelsLabel')} {t(car.modelsKey)}
+                  </p>
+
                   <ul className="space-y-2">
                     {features.map((feature, idx) => (
                       <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-center gap-2">
@@ -115,7 +146,6 @@ export function Fleet() {
                     ))}
                   </ul>
 
-                  {/* Price */}
                   <div className="border-t dark:border-gray-700 pt-4 flex items-end justify-between">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">
                       {formatMT(car.pricePerDay)} MT

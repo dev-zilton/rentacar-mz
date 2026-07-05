@@ -28,6 +28,7 @@ export interface Lead {
   pickup_location: string | null
   return_location: string | null
   car_type: string | null
+  preferred_model: string | null
   status: LeadStatus
   source: string | null
   created_at: string

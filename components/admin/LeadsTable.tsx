@@ -60,6 +60,7 @@ export function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
               <th className="text-left px-4 py-3 font-medium">Levantamento</th>
               <th className="text-left px-4 py-3 font-medium">Devolução</th>
               <th className="text-left px-4 py-3 font-medium">Carro</th>
+              <th className="text-left px-4 py-3 font-medium">Modelo</th>
               <th className="text-left px-4 py-3 font-medium">Estado</th>
             </tr>
           </thead>
@@ -75,6 +76,7 @@ export function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
                 <td className="px-4 py-3 whitespace-nowrap">{lead.pickup_location || '-'}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{lead.return_location || '-'}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{lead.car_type || '-'}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{lead.preferred_model || '-'}</td>
                 <td className="px-4 py-3">
                   <select
                     value={lead.status || 'pending'}

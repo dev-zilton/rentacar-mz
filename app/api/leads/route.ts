@@ -16,7 +16,7 @@ function getSupabaseClient() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { email, phone, pickupDate, returnDate, pickupLocation, returnLocation, carType, name } = body
+    const { email, phone, pickupDate, returnDate, pickupLocation, returnLocation, carType, name, preferredModel } = body
 
     // Validate input
     if (!email || !phone || !name || !pickupLocation || !pickupDate || !returnDate) {
@@ -87,6 +87,7 @@ export async function POST(request: NextRequest) {
           return_location: returnLocation || pickupLocation,
           car_type: carTypeToCheck,
           name,
+          preferred_model: preferredModel || null,
           created_at: new Date().toISOString(),
           source: 'landing_page',
         },

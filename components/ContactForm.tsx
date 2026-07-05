@@ -13,6 +13,7 @@ interface FormData {
   pickupLocation: string
   returnLocation: string
   carType: string
+  preferredModel: string
 }
 
 // Aceita +258 8X XXX XXXX (com ou sem espaços/traços) ou apenas 8X XXX XXXX
@@ -27,6 +28,7 @@ const INITIAL_FORM_DATA: FormData = {
   pickupLocation: '',
   returnLocation: '',
   carType: 'standard',
+  preferredModel: '',
 }
 
 /**
@@ -309,6 +311,22 @@ export function ContactForm() {
               <option value="frigorifico">{t('vehicleTypes.frigorifico.name')}</option>
               <option value="carga">{t('vehicleTypes.carga.name')}</option>
             </select>
+          </div>
+
+          {/* Preferred Model */}
+          <div>
+            <label htmlFor="preferredModel" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t('contact.preferredModel')}
+            </label>
+            <input
+              type="text"
+              id="preferredModel"
+              name="preferredModel"
+              value={formData.preferredModel}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:border-blue-500 transition-colors"
+              placeholder={t('contact.preferredModelPlaceholder')}
+            />
           </div>
 
           {/* Status Messages */}
