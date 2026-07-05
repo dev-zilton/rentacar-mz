@@ -10,6 +10,7 @@ interface OptimizedImageProps {
   lazy?: boolean
   className?: string
   sizes?: string
+  objectFit?: 'cover' | 'contain'
 }
 
 /**
@@ -31,6 +32,7 @@ export function OptimizedImage({
   lazy = true,
   className = '',
   sizes,
+  objectFit = 'cover',
 }: OptimizedImageProps) {
   return (
     <div
@@ -50,7 +52,7 @@ export function OptimizedImage({
           sizes ||
           '(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px'
         }
-        className="h-full w-full object-cover"
+        className={`h-full w-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
         quality={80}
         placeholder="empty"
       />

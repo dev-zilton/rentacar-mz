@@ -64,6 +64,7 @@ export const translations = {
       title: "Tipos de Viaturas",
       subtitle:
         "Explore as categorias disponiveis e escolha a viatura ideal para a sua viagem",
+      cta: "Pedir cotação",
       pickup: {
         name: "Pick-up",
         description:
@@ -88,6 +89,16 @@ export const translations = {
         name: "Passageiros",
         description:
           "Viaturas de maior capacidade para grupos e familias numerosas, garantindo espaco e comodidade para todos.",
+      },
+      frigorifico: {
+        name: "Camiao Frigorifico",
+        description:
+          "Transporte de carga com controlo de temperatura, ideal para produtos perecivais e mercadorias que exigem cadeia de frio.",
+      },
+      carga: {
+        name: "Camiao de Carga",
+        description:
+          "Transporte de mercadorias gerais com amplo espaco de carga, ideal para mudancas, distribuicao e transporte comercial.",
       },
     },
     // Pricing
@@ -248,6 +259,7 @@ export const translations = {
       title: "Vehicle Types",
       subtitle:
         "Browse our vehicle categories and choose the right one for your trip",
+      cta: "Request Quote",
       pickup: {
         name: "Pick-up",
         description:
@@ -272,6 +284,16 @@ export const translations = {
         name: "Passenger Van",
         description:
           "Higher-capacity vehicles for larger groups and families, with plenty of room and comfort for everyone.",
+      },
+      frigorifico: {
+        name: "Refrigerated Truck",
+        description:
+          "Temperature-controlled cargo transport, ideal for perishable goods and products that require a cold chain.",
+      },
+      carga: {
+        name: "Cargo Truck",
+        description:
+          "General freight transport with ample cargo space, ideal for moves, distribution and commercial transport.",
       },
     },
     // Pricing

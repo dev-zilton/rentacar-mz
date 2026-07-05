@@ -306,6 +306,8 @@ export function ContactForm() {
               <option value="standard">{t('fleet.standard')}</option>
               <option value="suv">{t('fleet.suv')}</option>
               <option value="premium">{t('fleet.premium')}</option>
+              <option value="frigorifico">{t('vehicleTypes.frigorifico.name')}</option>
+              <option value="carga">{t('vehicleTypes.carga.name')}</option>
             </select>
           </div>
 
