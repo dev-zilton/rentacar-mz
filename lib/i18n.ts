@@ -45,11 +45,12 @@ export const translations = {
     },
     // Hero
     hero: {
+      welcomeText: "Bem-vindo à EliteRent Moçambique",
       title: "Aluguer de Carros Premium em Moçambique",
       subtitle: "Escolha o seu veículo perfeito com a EliteRent Moçambique",
       cta: "Reservar Agora",
       viewFleet: "Ver Frota",
-      stat1Value: "15 mil+",
+      stat1Value: "150+",
       stat1Label: "Clientes Satisfeitos",
       stat2Value: "50+",
       stat2Label: "Viaturas",
@@ -291,11 +292,12 @@ export const translations = {
     },
     // Hero
     hero: {
+      welcomeText: "Welcome to EliteRent Mozambique",
       title: "Premium Car Rentals in Mozambique",
       subtitle: "Choose your perfect vehicle with EliteRent Mozambique",
       cta: "Book Now",
       viewFleet: "View Fleet",
-      stat1Value: "15K+",
+      stat1Value: "150+",
       stat1Label: "Happy Customers",
       stat2Value: "50+",
       stat2Label: "Vehicles",

@@ -26,6 +26,21 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
+          <div className="inline-block bg-blue-50 dark:bg-blue-900/30 rounded-full px-4 py-2 max-w-full">
+            <span className="text-sm font-medium text-blue-700 dark:text-blue-300 block mb-1">
+              {t('hero.welcomeText')}
+            </span>
+            <div className="hero-car-track text-blue-500 dark:text-blue-400">
+              <div className="hero-car-particle" style={{ animationDelay: '0.5s, 0.5s' }}></div>
+              <div className="hero-car-particle" style={{ animationDelay: '0.35s, 0.35s' }}></div>
+              <div className="hero-car-particle" style={{ animationDelay: '0.2s, 0.2s' }}></div>
+              <div className="hero-car-icon">
+                <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11h1a1 1 0 011 1v4a1 1 0 01-1 1h-1a2 2 0 01-4 0H9a2 2 0 01-4 0H4a1 1 0 01-1-1v-4a1 1 0 011-1h1zm2.1 0h9.8l-1-3H8.1l-1 3z" />
+                </svg>
+              </div>
+            </div>
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-700 dark:from-blue-400 dark:to-blue-600">
               {t("hero.title")}
