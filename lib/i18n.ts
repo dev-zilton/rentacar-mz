@@ -67,7 +67,7 @@ export const translations = {
       economyModels:
         "Toyota Vitz, Suzuki Swift, Toyota Ractis, Honda Freed, Mazda Demio, Honda Fit, Kia Picanto, Hyundai i10 ou Nissan March",
       economyFeatures: [
-        "3 Lugares",
+        "5 Lugares",
         "Automático",
         "Motor 1.2L",
         "Económico em combustível",
@@ -314,7 +314,7 @@ export const translations = {
       economyModels:
         "Toyota Vitz, Suzuki Swift, Toyota Ractis, Honda Freed, Mazda Demio, Honda Fit, Kia Picanto, Hyundai i10 or Nissan March",
       economyFeatures: [
-        "3 Seats",
+        "5 Seats",
         "Automatic",
         "1.2L Engine",
         "Fuel Efficient",
