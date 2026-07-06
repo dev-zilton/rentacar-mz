@@ -20,11 +20,11 @@ export const translations = {
         "Ser a marca de referência em aluguer de viaturas em Moçambique, reconhecida pela confiança, qualidade e cobertura nacional.",
       valuesTitle: "Valores",
       valuesList: [
+        "Compromisso com o cliente",
         "Profissionalismo",
         "Transparência",
         "Qualidade",
         "Confiança",
-        "Compromisso com o cliente",
       ],
       statsTitle: "Porquê escolher-nos?",
       statYearsValue: "5+",
@@ -38,7 +38,7 @@ export const translations = {
     nav: {
       about: "Sobre Nós",
       fleet: "Frota",
-      pricing: "Preços",
+      pricing: "Descontos",
       faq: "Perguntas",
       contact: "Contacto",
       vehicleList: "Lista de Viaturas",
@@ -266,11 +266,11 @@ export const translations = {
         "To be the leading car rental brand in Mozambique, recognised for trust, quality and nationwide coverage.",
       valuesTitle: "Values",
       valuesList: [
+        "Customer commitment",
         "Professionalism",
         "Transparency",
         "Quality",
         "Trust",
-        "Customer commitment",
       ],
       statsTitle: "Why choose us?",
       statYearsValue: "5+",
@@ -284,7 +284,7 @@ export const translations = {
     nav: {
       about: "About Us",
       fleet: "Fleet",
-      pricing: "Pricing",
+      pricing: "Discounts",
       faq: "FAQ",
       contact: "Contact",
       vehicleList: "Vehicle List",
