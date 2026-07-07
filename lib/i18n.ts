@@ -34,9 +34,25 @@ export const translations = {
       statCarsValue: "50+",
       statCarsLabel: "Viaturas Alugadas",
     },
+    // Servicos
+    services: {
+      title: "Os Nossos Serviços",
+      subtitle: "Soluções completas de mobilidade para empresas e particulares em Moçambique",
+      aldTitle: "Aluguer de Longa Duração (ALD)",
+      aldDesc:
+        "Aluguer de viaturas por períodos prolongados, ideal para empresas que precisam de mobilidade constante sem os custos e riscos da aquisição de uma frota própria.",
+      fleetTitle: "Gestão de Frota",
+      fleetDesc:
+        "Gerimos a sua frota de viaturas de forma completa, incluindo manutenção, seguros e substituição de veículos, permitindo que se foque no seu negócio.",
+      racTitle: "Aluguer de Curto Prazo (RAC)",
+      racDesc:
+        "Aluguer de viaturas por dias ou semanas, com ou sem condutor, para viagens de negócios, turismo ou necessidades pontuais de transporte.",
+      cta: "Pedir Cotação",
+    },
     // Navigation
     nav: {
       about: "Sobre Nós",
+      services: "Serviços",
       fleet: "Frota",
       pricing: "Descontos",
       faq: "Perguntas",
@@ -281,9 +297,25 @@ export const translations = {
       statCarsValue: "50+",
       statCarsLabel: "Vehicles Rented",
     },
+    // Services
+    services: {
+      title: "Our Services",
+      subtitle: "Complete mobility solutions for businesses and individuals in Mozambique",
+      aldTitle: "Long-Term Rental",
+      aldDesc:
+        "Vehicle rental for extended periods, ideal for companies that need constant mobility without the costs and risks of owning their own fleet.",
+      fleetTitle: "Fleet Management",
+      fleetDesc:
+        "We fully manage your vehicle fleet, including maintenance, insurance and vehicle replacement, so you can focus on your business.",
+      racTitle: "Short-Term Rental",
+      racDesc:
+        "Vehicle rental by the day or week, with or without a driver, for business trips, tourism or one-off transport needs.",
+      cta: "Request Quote",
+    },
     // Navigation
     nav: {
       about: "About Us",
+      services: "Services",
       fleet: "Fleet",
       pricing: "Discounts",
       faq: "FAQ",
