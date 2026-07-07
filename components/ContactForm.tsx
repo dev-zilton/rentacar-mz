@@ -154,12 +154,12 @@ export function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.name ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
               placeholder="Ana Machava"
             />
             {errors.name && (
-              <p className="text-red-600 text-sm mt-1">{errors.name}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.name}</p>
             )}
           </div>
 
@@ -175,12 +175,12 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.email ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
               placeholder="ana@example.com"
             />
             {errors.email && (
-              <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.email}</p>
             )}
           </div>
 
@@ -196,12 +196,12 @@ export function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.phone ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.phone ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
               placeholder={t('contact.phonePlaceholder')}
             />
             {errors.phone && (
-              <p className="text-red-600 text-sm mt-1">{errors.phone}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.phone}</p>
             )}
           </div>
 
@@ -217,11 +217,11 @@ export function ContactForm() {
               value={formData.pickupDate}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.pickupDate ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.pickupDate ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
             />
             {errors.pickupDate && (
-              <p className="text-red-600 text-sm mt-1">{errors.pickupDate}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.pickupDate}</p>
             )}
 
           {/* Return Date */}
@@ -236,11 +236,11 @@ export function ContactForm() {
               value={formData.returnDate}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.returnDate ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.returnDate ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
             />
             {errors.returnDate && (
-              <p className="text-red-600 text-sm mt-1">{errors.returnDate}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.returnDate}</p>
             )}
           </div>
           </div>
@@ -256,7 +256,7 @@ export function ContactForm() {
               value={formData.pickupLocation}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
-                errors.pickupLocation ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                errors.pickupLocation ? 'border-danger-500' : 'border-gray-300 dark:border-gray-600'
               } focus:outline-none focus:border-blue-500 transition-colors`}
             >
               <option value="">{t('contact.selectLocation')}</option>
@@ -267,7 +267,7 @@ export function ContactForm() {
               ))}
             </select>
             {errors.pickupLocation && (
-              <p className="text-red-600 text-sm mt-1">{errors.pickupLocation}</p>
+              <p className="text-danger-600 text-sm mt-1">{errors.pickupLocation}</p>
             )}
           </div>
 
@@ -336,7 +336,7 @@ export function ContactForm() {
             </div>
           )}
           {status === 'error' && (
-            <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 px-4 py-3 rounded-lg">
+            <div className="bg-danger-50 dark:bg-danger-900/30 border border-danger-200 dark:border-danger-800 text-danger-800 dark:text-danger-300 px-4 py-3 rounded-lg">
               {message}
             </div>
           )}

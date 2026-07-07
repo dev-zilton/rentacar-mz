@@ -7,7 +7,7 @@ const STATUS_OPTIONS: { value: LeadStatus; label: string; color: string }[] = [
   { value: 'pending', label: 'Pendente', color: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-300' },
   { value: 'contacted', label: 'Contactado', color: 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300' },
   { value: 'confirmed', label: 'Confirmado', color: 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300' },
-  { value: 'cancelled', label: 'Cancelado', color: 'bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300' },
+  { value: 'cancelled', label: 'Cancelado', color: 'bg-danger-100 text-danger-800 dark:bg-danger-900/40 dark:text-danger-300' },
 ]
 
 function statusStyle(status: LeadStatus) {

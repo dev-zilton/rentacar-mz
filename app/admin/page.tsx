@@ -26,7 +26,7 @@ export default async function AdminPage() {
         </div>
 
         {error && (
-          <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 px-4 py-3 rounded-lg mb-6">
+          <div className="bg-danger-50 dark:bg-danger-900/30 border border-danger-200 dark:border-danger-800 text-danger-800 dark:text-danger-300 px-4 py-3 rounded-lg mb-6">
             Erro ao carregar reservas: {error.message}
           </div>
         )}
