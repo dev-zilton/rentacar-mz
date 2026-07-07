@@ -28,9 +28,9 @@ export function Footer() {
           <div>
             <h5 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h5>
             <ul className="space-y-2 text-sm">
-              <li><a href="#fleet" className="hover:text-blue-400 transition-colors">{t('nav.fleet')}</a></li>
-              <li><a href="#pricing" className="hover:text-blue-400 transition-colors">{t('nav.pricing')}</a></li>
-              <li><a href="#faq" className="hover:text-blue-400 transition-colors">{t('nav.faq')}</a></li>
+              <li><a href="/#fleet" className="hover:text-blue-400 transition-colors">{t('nav.fleet')}</a></li>
+              <li><a href="/#pricing" className="hover:text-blue-400 transition-colors">{t('nav.pricing')}</a></li>
+              <li><a href="/#faq" className="hover:text-blue-400 transition-colors">{t('nav.faq')}</a></li>
             </ul>
           </div>
 
@@ -46,8 +46,8 @@ export function Footer() {
           <div>
             <h5 className="text-white font-semibold mb-4">{t('footer.legal')}</h5>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t('footer.privacy')}</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t('footer.terms')}</a></li>
+              <li><a href="/privacidade" className="hover:text-blue-400 transition-colors">{t('footer.privacy')}</a></li>
+              <li><a href="/termos" className="hover:text-blue-400 transition-colors">{t('footer.terms')}</a></li>
             </ul>
           </div>
         </div>

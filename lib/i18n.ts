@@ -47,7 +47,8 @@ export const translations = {
     // Servicos
     services: {
       title: "Os Nossos Serviços",
-      subtitle: "Soluções completas de mobilidade para empresas e particulares em Moçambique",
+      subtitle:
+        "Soluções completas de mobilidade para empresas e particulares em Moçambique",
       aldTitle: "Aluguer de Longa Duração (ALD)",
       aldDesc:
         "Aluguer de viaturas por períodos prolongados, ideal para empresas que precisam de mobilidade constante sem os custos e riscos da aquisição de uma frota própria.",
@@ -120,9 +121,15 @@ export const translations = {
       premiumFeatures: ["5 Lugares", "Automático", "Interior em Pele"],
       modelsLabel: "Modelos disponíveis:",
       frigorifico: "Camião Frigorífico",
-      frigorificoDesc: "Transporte com controlo de temperatura para produtos perecíveis",
+      frigorificoDesc:
+        "Transporte com controlo de temperatura para produtos perecíveis",
       frigorificoModels: "Mitsubishi Fuso Canter",
-      frigorificoFeatures: ["Cabine para 3", "Manual", "Caixa refrigerada", "Controlo de temperatura"],
+      frigorificoFeatures: [
+        "Cabine para 3",
+        "Manual",
+        "Caixa refrigerada",
+        "Controlo de temperatura",
+      ],
       carga: "Camião de Carga",
       cargaDesc: "Transporte de mercadorias gerais com amplo espaço de carga",
       cargaModels: "Isuzu NPR",
@@ -231,7 +238,8 @@ export const translations = {
         pickupLocationRequired: "Local de levantamento obrigatório",
         returnDateRequired: "Data de devolução obrigatória",
         returnDateInvalid: "A devolução deve ser depois do levantamento",
-        unavailable: "Este carro já está reservado nessas datas. Escolha outras datas ou outro tipo de carro.",
+        unavailable:
+          "Este carro já está reservado nessas datas. Escolha outras datas ou outro tipo de carro.",
       },
     },
     // FAQ
@@ -271,7 +279,7 @@ export const translations = {
       terms: "Termos",
       contact: "Contacto",
       rights: "Todos os direitos reservados",
-      address: "Av. Julius Nyerere, Maputo, Moçambique",
+      address: "Matola, Matola-Rio, Maputo, Moçambique",
     },
   },
   en: {
@@ -320,7 +328,8 @@ export const translations = {
     // Services
     services: {
       title: "Our Services",
-      subtitle: "Complete mobility solutions for businesses and individuals in Mozambique",
+      subtitle:
+        "Complete mobility solutions for businesses and individuals in Mozambique",
       aldTitle: "Long-Term Rental",
       aldDesc:
         "Vehicle rental for extended periods, ideal for companies that need constant mobility without the costs and risks of owning their own fleet.",
@@ -390,7 +399,12 @@ export const translations = {
       frigorifico: "Refrigerated Truck",
       frigorificoDesc: "Temperature-controlled transport for perishable goods",
       frigorificoModels: "Mitsubishi Fuso Canter",
-      frigorificoFeatures: ["3-seat cabin", "Manual", "Refrigerated box", "Temperature control"],
+      frigorificoFeatures: [
+        "3-seat cabin",
+        "Manual",
+        "Refrigerated box",
+        "Temperature control",
+      ],
       carga: "Cargo Truck",
       cargaDesc: "General freight transport with ample cargo space",
       cargaModels: "Isuzu NPR",
@@ -499,7 +513,8 @@ export const translations = {
         pickupLocationRequired: "Pickup location required",
         returnDateRequired: "Return date required",
         returnDateInvalid: "Return date must be after pickup",
-        unavailable: "This car is already booked for those dates. Please choose different dates or another car type.",
+        unavailable:
+          "This car is already booked for those dates. Please choose different dates or another car type.",
       },
     },
     // FAQ
@@ -539,7 +554,7 @@ export const translations = {
       terms: "Terms",
       contact: "Contact",
       rights: "All rights reserved",
-      address: "Av. Julius Nyerere, Maputo, Mozambique",
+      address: "Matola, Matola-Rio, Maputo, Mozambique",
     },
   },
 } satisfies Record<Language, unknown>;

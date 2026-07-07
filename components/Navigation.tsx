@@ -53,12 +53,12 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: t("nav.about") },
-    { href: "#services", label: t("nav.services") },
-    { href: "#fleet", label: t("nav.fleet") },
-    { href: "#vehicle-types", label: t("nav.vehicleList") },
-    { href: "#pricing", label: t("nav.pricing") },
-    { href: "#faq", label: t("nav.faq") },
+    { href: "/#about", label: t("nav.about") },
+    { href: "/#services", label: t("nav.services") },
+    { href: "/#fleet", label: t("nav.fleet") },
+    { href: "/#vehicle-types", label: t("nav.vehicleList") },
+    { href: "/#pricing", label: t("nav.pricing") },
+    { href: "/#faq", label: t("nav.faq") },
   ];
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -72,25 +72,25 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <a href="#" className="flex items-center gap-2">
           <Image src="/images/logo.png" alt="Transporte&Logística K&K" width={40} height={40} className="h-10 w-10 object-contain" priority />
           <div className="text-xl font-bold bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
             {t("brand.name")}
           </div>
-        </div>
+        </a>
 
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors"
           >
             {t("nav.contact")}
@@ -152,7 +152,7 @@ export function Navigation() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={closeMobileMenu}
               className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-lg text-center hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors"
             >
