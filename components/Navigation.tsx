@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
+import Image from "next/image";
 
 /**
  * Navigation Component with Scroll Detection
@@ -71,8 +72,11 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between">
-        <div className="text-2xl font-bold bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-          {t("brand.name")}
+        <div className="flex items-center gap-2">
+          <Image src="/images/logo.png" alt="Transporte&Logística K&K" width={40} height={40} className="h-10 w-10 object-contain" priority />
+          <div className="text-xl font-bold bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+            {t("brand.name")}
+          </div>
         </div>
 
         <div className="hidden md:flex gap-8 items-center">
