@@ -34,6 +34,16 @@ export const translations = {
       statCarsValue: "50+",
       statCarsLabel: "Viaturas Alugadas",
     },
+    // Sede / Localizacao
+    location: {
+      title: "Sede",
+      address: "Matola, Matola-Rio, Maputo, Moçambique",
+      hours: "07:30 - 17:30 (Seg-Sáb)",
+      hoursLabel: "Horário",
+      addressLabel: "Morada",
+      emailLabel: "Email",
+      phoneLabel: "Telefone",
+    },
     // Servicos
     services: {
       title: "Os Nossos Serviços",
@@ -296,6 +306,16 @@ export const translations = {
       statClientsLabel: "Happy Customers",
       statCarsValue: "50+",
       statCarsLabel: "Vehicles Rented",
+    },
+    // Headquarters / Location
+    location: {
+      title: "Headquarters",
+      address: "Matola, Matola-Rio, Maputo, Mozambique",
+      hours: "07:30 AM - 05:30 PM (Mon-Sat)",
+      hoursLabel: "Hours",
+      addressLabel: "Address",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
     },
     // Services
     services: {

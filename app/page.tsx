@@ -5,6 +5,7 @@ import { Services } from '@/components/Services'
 import { Fleet } from '@/components/Fleet'
 import { VehicleTypes } from '@/components/VehicleTypes'
 import { Pricing } from '@/components/Pricing'
+import { Location } from '@/components/Location'
 import { ContactForm } from '@/components/ContactForm'
 import { FAQ } from '@/components/FAQ'
 import { Footer } from '@/components/Footer'
@@ -36,6 +37,7 @@ export default function Page() {
       <Fleet />
       <VehicleTypes />
       <Pricing />
+      <Location />
       <ContactForm />
       <FAQ />
       <Footer />
