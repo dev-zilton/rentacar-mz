@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-MZ" suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <Script
           id="theme-init"
           strategy="beforeInteractive"
