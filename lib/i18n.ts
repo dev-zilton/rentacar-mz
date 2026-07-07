@@ -4,14 +4,14 @@ export const translations = {
   pt: {
     // Brand
     brand: {
-      name: "EliteRent Moçambique",
+      name: "Transporte&Logística K&K",
       description:
         "Aluguer de viaturas premium em Maputo e principais cidades de Moçambique, com suporte 24/7.",
     },
     // Sobre Nos - CONTEUDO FICTICIO, substituir pelo texto real da empresa
     about: {
       title: "Sobre Nós",
-      subtitle: "Conheça a EliteRent Moçambique",
+      subtitle: "Conheça a Transporte&Logística K&K",
       missionTitle: "Missão",
       missionText:
         "Facilitar a mobilidade em Moçambique, oferecendo veículos de qualidade e um serviço de aluguer simples, transparente e acessível para famílias, empresas e visitantes.",
@@ -45,9 +45,9 @@ export const translations = {
     },
     // Hero
     hero: {
-      welcomeText: "Bem-vindo à EliteRent Moçambique",
+      welcomeText: "Bem-vindo à Transporte&Logística K&K",
       title: "Aluguer de Carros Premium em Moçambique",
-      subtitle: "Escolha o seu veículo perfeito com a EliteRent Moçambique",
+      subtitle: "Escolha o seu veículo perfeito com a Transporte&Logística K&K",
       cta: "Reservar Agora",
       viewFleet: "Ver Frota",
       stat1Value: "150+",
@@ -251,14 +251,14 @@ export const translations = {
   en: {
     // Brand
     brand: {
-      name: "EliteRent Mozambique",
+      name: "Transporte&Logística K&K",
       description:
         "Premium car rental in Maputo and Mozambique's main cities, with 24/7 support.",
     },
     // About Us - PLACEHOLDER CONTENT, replace with real company text
     about: {
       title: "About Us",
-      subtitle: "Meet EliteRent Mozambique",
+      subtitle: "Meet Transporte&Logística K&K",
       missionTitle: "Mission",
       missionText:
         "To make mobility easier across Mozambique by offering quality vehicles and a simple, transparent and affordable rental service for families, businesses and visitors.",
@@ -292,9 +292,9 @@ export const translations = {
     },
     // Hero
     hero: {
-      welcomeText: "Welcome to EliteRent Mozambique",
+      welcomeText: "Welcome to Transporte&Logística K&K",
       title: "Premium Car Rentals in Mozambique",
-      subtitle: "Choose your perfect vehicle with EliteRent Mozambique",
+      subtitle: "Choose your perfect vehicle with Transporte&Logística K&K",
       cta: "Book Now",
       viewFleet: "View Fleet",
       stat1Value: "150+",

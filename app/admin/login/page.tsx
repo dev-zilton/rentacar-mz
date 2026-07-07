@@ -40,7 +40,7 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950 px-4">
       <div className="w-full max-w-sm bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Painel Admin</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">EliteRent Moçambique</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Transporte&Logística K&K</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

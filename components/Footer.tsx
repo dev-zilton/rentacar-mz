@@ -38,7 +38,7 @@ export function Footer() {
             <h5 className="text-white font-semibold mb-4">{t('footer.contactTitle')}</h5>
             <ul className="space-y-2 text-sm">
               <li><a href="tel:+258843792635" className="hover:text-blue-400 transition-colors">+258 84 379 2635</a></li>
-              <li><a href="mailto:reservas@eliterent.co.mz" className="hover:text-blue-400 transition-colors">reservas@eliterent.co.mz</a></li>
+              <li><a href="mailto:transporteslogisticakk@gmail.com" className="hover:text-blue-400 transition-colors">transporteslogisticakk@gmail.com</a></li>
               <li className="text-gray-400">{t('footer.address')}</li>
             </ul>
           </div>

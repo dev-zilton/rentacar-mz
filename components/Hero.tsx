@@ -93,7 +93,7 @@ export function Hero() {
         <div className="relative">
           <OptimizedImage
             src="/images/hero-rentacar.png"
-            alt="Sedan de luxo premium - EliteRent Moçambique"
+            alt="Sedan de luxo premium - Transporte&Logística K&K"
             width={500}
             height={400}
             priority={true}

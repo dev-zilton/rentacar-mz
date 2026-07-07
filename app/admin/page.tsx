@@ -19,7 +19,7 @@ export default async function AdminPage() {
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Reservas</h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-              EliteRent Moçambique — Painel Admin
+              Transporte&Logística K&K — Painel Admin
             </p>
           </div>
           <LogoutButton />

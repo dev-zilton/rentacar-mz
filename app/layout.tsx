@@ -5,13 +5,13 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EliteRent Moçambique | Aluguer de Viaturas Premium",
+  title: "Transporte&Logística K&K | Aluguer de Viaturas Premium",
   description:
-    "Aluguer de carros premium em Maputo, Beira e Nampula. Reserve já a sua viatura com a EliteRent Moçambique, pagamento em Metical (MT).",
+    "Aluguer de carros premium em Maputo, Beira e Nampula. Reserve já a sua viatura com a Transporte&Logística K&K, pagamento em Metical (MT).",
   keywords:
-    "aluguer de carros Moçambique, rent a car Maputo, aluguer de viaturas, carros de aluguer Beira, EliteRent",
+    "aluguer de carros Moçambique, rent a car Maputo, aluguer de viaturas, carros de aluguer Beira, Transporte Logistica KK",
   openGraph: {
-    title: "EliteRent Moçambique | Aluguer de Viaturas Premium",
+    title: "Transporte&Logística K&K | Aluguer de Viaturas Premium",
     description:
       "Aluguer de carros premium em Maputo e principais cidades de Moçambique",
     type: "website",

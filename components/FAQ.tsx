@@ -81,7 +81,7 @@ export function FAQ() {
             {t("faq.notFoundSubtitle")}
           </p>
           <a
-            href="mailto:reservas@eliterent.co.mz"
+            href="mailto:transporteslogisticakk@gmail.com"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
           >
             {t("faq.contactSupport")}
