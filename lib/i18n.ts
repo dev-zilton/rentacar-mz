@@ -6,7 +6,7 @@ export const translations = {
     brand: {
       name: "Transporte&Logística K&K",
       description:
-        "Aluguer de viaturas premium em Maputo e principais cidades de Moçambique, com suporte 24/7.",
+        "Aluguer de viaturas em Maputo e principais cidades de Moçambique, com suporte 24/7.",
     },
     // Sobre Nos - CONTEUDO FICTICIO, substituir pelo texto real da empresa
     about: {
@@ -73,7 +73,7 @@ export const translations = {
     // Hero
     hero: {
       welcomeText: "Bem-vindo à Transporte&Logística K&K",
-      title: "Aluguer de Carros Premium em Moçambique",
+      title: "Soluções de Aluguer de Carros em Moçambique",
       subtitle: "Escolha o seu veículo perfeito com a Transporte&Logística K&K",
       cta: "Reservar Agora",
       viewFleet: "Ver Frota",
@@ -88,7 +88,7 @@ export const translations = {
     fleet: {
       title: "Nossa Frota",
       subtitle:
-        "Escolha entre a nossa seleção de veículos premium disponíveis em Maputo, Beira e Nampula",
+        "Escolha entre a nossa seleção de veículos disponíveis em Maputo, Beira e Nampula",
       economy: "Económico",
       economyDesc: "Perfeito para deslocações urbanas em Maputo",
       economyModels:
@@ -114,11 +114,11 @@ export const translations = {
         "Tracção 4x4",
         "Ar Condicionado",
       ],
-      premium: "Premium",
-      premiumDesc: "Experiência de luxo absoluto",
-      premiumModels:
+      executive: "Executivo",
+      executiveDesc: "Experiência de conforto absoluto",
+      executiveModels:
         "Mercedes-Benz Classe C, Toyota Camry, Lexus ES, BMW Série 3, Audi A4 ou Volvo S60",
-      premiumFeatures: ["5 Lugares", "Automático", "Interior em Pele"],
+      executiveFeatures: ["5 Lugares", "Automático", "Interior em Pele"],
       modelsLabel: "Modelos disponíveis:",
       frigorifico: "Camião Frigorífico",
       frigorificoDesc:
@@ -271,7 +271,7 @@ export const translations = {
     footer: {
       about: "Sobre",
       aboutText:
-        "Aluguer de viaturas premium em Moçambique, com frota moderna e suporte 24/7.",
+        "Aluguer de viaturas em Moçambique, com frota moderna e suporte 24/7.",
       quickLinks: "Links Rápidos",
       contactTitle: "Contacto",
       legal: "Legal",
@@ -287,7 +287,7 @@ export const translations = {
     brand: {
       name: "Transporte&Logística K&K",
       description:
-        "Premium car rental in Maputo and Mozambique's main cities, with 24/7 support.",
+        "Car rental in Maputo and Mozambique's main cities, with 24/7 support.",
     },
     // About Us - PLACEHOLDER CONTENT, replace with real company text
     about: {
@@ -354,7 +354,7 @@ export const translations = {
     // Hero
     hero: {
       welcomeText: "Welcome to Transporte&Logística K&K",
-      title: "Premium Car Rentals in Mozambique",
+      title: "Car Rental Solutions in Mozambique",
       subtitle: "Choose your perfect vehicle with Transporte&Logística K&K",
       cta: "Book Now",
       viewFleet: "View Fleet",
@@ -369,7 +369,7 @@ export const translations = {
     fleet: {
       title: "Our Fleet",
       subtitle:
-        "Choose from our selection of premium vehicles available in Maputo, Beira and Nampula",
+        "Choose from our selection of vehicles available in Maputo, Beira and Nampula",
       economy: "Economy",
       economyDesc: "Perfect for city trips in Maputo",
       economyModels:
@@ -390,11 +390,11 @@ export const translations = {
       suvModels:
         "Toyota Land Cruiser Prado, Toyota Fortuner, Mitsubishi Pajero, Ford Ranger, Toyota Hilux or Nissan Navara",
       suvFeatures: ["5 Seats", "Automatic", "4x4 Drive", "Air Conditioning"],
-      premium: "Premium",
-      premiumDesc: "Ultimate luxury experience",
-      premiumModels:
+      executive: "Executive",
+      executiveDesc: "Ultimate comfort experience",
+      executiveModels:
         "Mercedes-Benz Classe C, Toyota Camry, Lexus ES, BMW Serie 3, Audi A4 or Volvo S60",
-      premiumFeatures: ["5 Seats", "Automatic", "Leather Interior"],
+      executiveFeatures: ["5 Seats", "Automatic", "Leather Interior"],
       modelsLabel: "Available models:",
       frigorifico: "Refrigerated Truck",
       frigorificoDesc: "Temperature-controlled transport for perishable goods",
@@ -546,7 +546,7 @@ export const translations = {
     footer: {
       about: "About",
       aboutText:
-        "Premium car rental in Mozambique, with a modern fleet and 24/7 support.",
+        "Car rental in Mozambique, with a modern fleet and 24/7 support.",
       quickLinks: "Quick Links",
       contactTitle: "Contact",
       legal: "Legal",

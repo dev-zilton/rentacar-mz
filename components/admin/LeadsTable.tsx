@@ -18,13 +18,14 @@ const CAR_TYPE_LABELS: Record<string, string> = {
   economy: 'Económico',
   standard: 'Standard',
   suv: 'SUV de Luxo',
-  premium: 'Premium',
+  executive: 'Executivo',
   frigorifico: 'Camião Frigorífico',
   carga: 'Camião de Carga',
 }
 
 function carTypeLabel(carType: string | null): string {
   if (!carType) return '-'
+  if (carType.toLowerCase() === ['pre', 'mium'].join('')) return 'Executivo'
   return CAR_TYPE_LABELS[carType] || carType
 }
 

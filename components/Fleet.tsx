@@ -56,12 +56,12 @@ const cars: CarTier[] = [
   },
   {
     id: 4,
-    nameKey: 'fleet.premium',
-    descKey: 'fleet.premiumDesc',
-    modelsKey: 'fleet.premiumModels',
-    featuresKey: 'fleet.premiumFeatures',
+    nameKey: 'fleet.executive',
+    descKey: 'fleet.executiveDesc',
+    modelsKey: 'fleet.executiveModels',
+    featuresKey: 'fleet.executiveFeatures',
     pricePerDay: 9000,
-    image: '/images/car-premium.png',
+    image: '/images/car-executive.png',
   },
   {
     id: 5,

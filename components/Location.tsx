@@ -15,7 +15,7 @@ export function Location() {
             <div className="relative h-64 md:h-96 w-full rounded-xl overflow-hidden shadow-lg">
               <div className="w-full h-full animate-slow-zoom">
                 <OptimizedImage
-                  src="/images/car-premium.png"
+                  src="/images/car-executive.png"
                   alt="Sede Transporte&Logística K&K"
                   width={700}
                   height={500}

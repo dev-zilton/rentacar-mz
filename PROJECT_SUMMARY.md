@@ -139,7 +139,7 @@ public/
     ├── hero-rentacar.png         # Hero image (priority)
     ├── car-economy.png           # Fleet image
     ├── car-suv.png               # Fleet image
-    └── car-premium.png           # Fleet image
+    └── car-executive.png         # Fleet image
 
 scripts/
 └── setup-supabase.sql            # Database schema
@@ -224,13 +224,13 @@ git push origin main
 ## 📈 SEO & Metadata
 
 ### Page Title
-"Elite Car Rentals | Premium Vehicle Rentals"
+"Elite Car Rentals | Vehicle Rentals"
 
 ### Meta Description
-"Premium car rental service with luxury fleet. Book your perfect vehicle today with Elite Car Rentals."
+"Car rental service with luxury fleet. Book your perfect vehicle today with Elite Car Rentals."
 
 ### Keywords
-car rental, luxury cars, vehicle rental, affordable rates, premium service
+car rental, luxury cars, vehicle rental, affordable rates, quality service
 
 ### Open Graph Tags
 - og:title, og:description, og:type

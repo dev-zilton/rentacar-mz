@@ -13,7 +13,7 @@ export function AboutUs() {
       <div className="relative h-80 md:h-96 w-full overflow-hidden">
         <OptimizedImage
           src="/images/about/banner.jpg"
-          alt="Interior de viatura premium"
+          alt="Interior de viatura"
           width={1600}
           height={700}
           lazy={true}

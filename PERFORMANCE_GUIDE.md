@@ -65,7 +65,7 @@ This landing page is built specifically to achieve **100/100 on PageSpeed Insigh
 ```jsx
 <OptimizedImage
   src="/images/car.webp"
-  alt="Premium sedan"
+  alt="Luxury sedan"
   width={500}
   height={400}
   priority={true}  // For hero image

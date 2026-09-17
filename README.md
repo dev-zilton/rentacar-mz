@@ -1,6 +1,6 @@
-# Elite Car Rentals - Premium Landing Page
+# Elite Car Rentals - Landing Page
 
-A high-performance, Core Web Vitals optimized landing page for a premium car rental service, built with Next.js 16, React 19, and Tailwind CSS 4.
+A high-performance, Core Web Vitals optimized landing page for a car rental service, built with Next.js 16, React 19, and Tailwind CSS 4.
 
 ## 🎯 Key Features
 
@@ -54,7 +54,7 @@ elite-car-rentals/
 │       ├── hero-rentacar.png
 │       ├── car-economy.png
 │       ├── car-suv.png
-│       └── car-premium.png
+│       └── car-executive.png
 ├── scripts/
 │   └── setup-supabase.sql      # Database schema
 ├── next.config.mjs             # Next.js configuration
@@ -207,7 +207,7 @@ email (VARCHAR) - Contact email
 phone (VARCHAR) - Contact phone
 name (VARCHAR) - Visitor name
 pickup_date (DATE) - Preferred pickup date
-car_type (VARCHAR) - Vehicle type (economy/standard/premium)
+car_type (VARCHAR) - Vehicle type (economy/standard/executive)
 source (VARCHAR) - Form source (landing_page)
 created_at (TIMESTAMP) - Record creation time
 updated_at (TIMESTAMP) - Last update time

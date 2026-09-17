@@ -5,15 +5,15 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Transporte&Logística K&K | Aluguer de Viaturas Premium",
+  title: "Transporte&Logística K&K | Aluguer de Viaturas",
   description:
-    "Aluguer de carros premium em Maputo, Beira e Nampula. Reserve já a sua viatura com a Transporte&Logística K&K, pagamento em Metical (MT).",
+    "Aluguer de carros em Maputo, Beira e Nampula. Reserve já a sua viatura com a Transporte&Logística K&K, pagamento em Metical (MT).",
   keywords:
     "aluguer de carros Moçambique, rent a car Maputo, aluguer de viaturas, carros de aluguer Beira, Transporte Logistica KK",
   openGraph: {
-    title: "Transporte&Logística K&K | Aluguer de Viaturas Premium",
+    title: "Transporte&Logística K&K | Aluguer de Viaturas",
     description:
-      "Aluguer de carros premium em Maputo e principais cidades de Moçambique",
+      "Aluguer de carros em Maputo e principais cidades de Moçambique",
     type: "website",
     locale: "pt_MZ",
   },
