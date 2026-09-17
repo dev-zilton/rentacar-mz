@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useRouter } from 'next/navigation'
 
 /**
  * Footer Component - Minimal footer with links
@@ -13,6 +14,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Footer() {
   const { t } = useLanguage()
+  const router = useRouter()
 
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
@@ -53,9 +55,13 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex items-center justify-between flex-col md:flex-row gap-4">
-          <p className="text-sm text-gray-400">
+          <button
+            type="button"
+            onClick={() => router.push('/admin/login')}
+            className="text-sm text-gray-400 text-left cursor-default"
+          >
             &copy; {new Date().getFullYear()} {t('brand.name')}. {t('footer.rights')}.
-          </p>
+          </button>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/profile.php?id=61565610243553" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-blue-400 transition-colors">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
